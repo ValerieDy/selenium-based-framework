@@ -63,7 +63,6 @@ public class Url {
         }
 
         public Builder withParam(String param) {
-            //url.setParameters(url.getParameters() + "&" + param);
             params.put(param, "");
             return this;
         }
@@ -71,8 +70,6 @@ public class Url {
 
         public Builder withParam(String param, String value) {
             params.put(param, value);
-            //url.setParameters(url.getParameters() + "&" + param + value);
-
             return this;
         }
 

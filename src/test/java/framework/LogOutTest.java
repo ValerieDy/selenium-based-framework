@@ -12,9 +12,7 @@ import org.junit.Test;
 
 public class LogOutTest extends TestBase {
 
-    private SeleniumUtils seleniumUtils;
     private HomePage homePage;
-    private TimeUtils timeUtils;
     private LoginPage loginPage;
     private NavBar navbar;
 
@@ -27,7 +25,6 @@ public class LogOutTest extends TestBase {
     protected void beforeTest() throws InterruptedException {
 
         browser.get(baseUrl);
-        seleniumUtils = new SeleniumUtils(browser);
         logger.writeLog("Open Home page");
         homePage = new HomePage(browser);
         homePage.waitForHomePageLoad();
