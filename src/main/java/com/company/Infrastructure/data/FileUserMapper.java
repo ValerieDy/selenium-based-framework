@@ -39,7 +39,7 @@ public class FileUserMapper implements UserMapper {
         return allUsers;
     }
 
-    //shpould throw userNotFound exception
+    //should throw userNotFound exception
     @Override
     public User findByEmail(String email) {
         User resultUser = null;
