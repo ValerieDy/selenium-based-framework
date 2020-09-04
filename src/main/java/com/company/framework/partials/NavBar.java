@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class NavBar {
     private WebDriver webDriver;
     private WebDriverWait wait;
+    private String signInLink = ".header_user_info a.login";
+    private String logOutLink = "a.logout";
 
     public NavBar(WebDriver webDriver) {
         this.wait = new WebDriverWait(webDriver, 40L);
@@ -20,7 +22,7 @@ public class NavBar {
 
     public void clickSignInLink() {
         try {
-            this.webDriver.findElement(By.cssSelector(".header_user_info a.login")).click();
+            this.webDriver.findElement(By.cssSelector(signInLink)).click();
         } catch (Exception var2) {
             throw new RuntimeException("Impossible to click button", var2);
         }
@@ -28,7 +30,7 @@ public class NavBar {
 
     public void clickSignOutLink() {
         try {
-            this.webDriver.findElement(By.cssSelector("a.logout")).click();
+            this.webDriver.findElement(By.cssSelector(logOutLink)).click();
         } catch (Exception var2) {
             throw new RuntimeException("Impossible to click button", var2);
         }

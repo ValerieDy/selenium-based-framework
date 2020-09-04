@@ -53,7 +53,7 @@ public class LoginPage {
 
     public void clickLoginButton() {
         try {
-            this.webDriver.findElement(By.cssSelector("button#SubmitLogin")).click();
+            this.webDriver.findElement(By.cssSelector(signInButton)).click();
         } catch (Exception var2) {
             throw new RuntimeException("Impossible to click button", var2);
         }
